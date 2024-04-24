@@ -70,10 +70,7 @@ export const BillboardsForm: React.FC<BillboardsFormProps> = ({
           data
         );
       } else {
-        await axios.post(
-          `/api/${params.storeId}/billboards/${params.billboardId}`,
-          data
-        );
+        await axios.post(`/api/${params.storeId}/billboards`, data);
       }
       router.refresh();
       toast.success(toastMessage);
@@ -91,6 +88,7 @@ export const BillboardsForm: React.FC<BillboardsFormProps> = ({
         `/api/${params.storeId}/billboards/${params.billboardId}`
       );
       router.refresh();
+      router.push(`/${params.storeId}/billboards`);
       router.push("/");
       toast.success("Billboard deleted");
     } catch (error) {
