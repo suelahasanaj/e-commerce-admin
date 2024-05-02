@@ -44,9 +44,9 @@ import * as z from "zod";
 
 interface ProductsFormProps {
   initialData:
-    | (Product & {
+  Product & {
         images: Image[];
-      })
+      }
     | null;
   categories: Category[];
   sizes: Size[];

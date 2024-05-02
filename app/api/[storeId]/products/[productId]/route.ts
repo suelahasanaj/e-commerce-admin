@@ -113,7 +113,8 @@ export async function DELETE(req:Request,
     const product=await prismadb.product.deleteMany({
         where:{
             id:params.productId
-        }
+        },
+        
     })
     return NextResponse.json(product);
 }catch(error){
@@ -133,6 +134,12 @@ export async function GET(req:Request,
     const product=await prismadb.product.findUnique({
         where:{
             id:params.productId
+        },
+        include:{
+            images:true,
+            category:true,
+            size:true,
+            color:true,
         }
     })
     return NextResponse.json(product);
