@@ -3,7 +3,7 @@ import prismadb from "@/lib/prismadb";
 import { SizeClient } from "./components/client";
 import { SizeColumn } from "./components/columns";
 
-export const SizesPage = async ({
+const SizesPage = async ({
   params,
 }: {
   params: {

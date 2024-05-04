@@ -3,7 +3,7 @@ import prismadb from "@/lib/prismadb";
 import { CategoryColumn } from "./components/columns";
 import { CategoryClient } from "./components/client";
 
-export const CategoryPage = async ({
+const CategoryPage = async ({
   params,
 }: {
   params: {

@@ -3,7 +3,7 @@ import prismadb from "@/lib/prismadb";
 import { ColorClient } from "./components/client";
 import { ColorColumn } from "./components/columns";
 
-export const ColorsPage = async ({
+const ColorsPage = async ({
   params,
 }: {
   params: {

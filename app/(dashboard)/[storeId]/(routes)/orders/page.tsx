@@ -4,7 +4,7 @@ import { OrderClient } from "./components/client";
 import { OrderColumn } from "./components/columns";
 import { formatter } from "@/lib/utils";
 
-export const OrdersPage = async ({
+const OrdersPage = async ({
   params,
 }: {
   params: {
