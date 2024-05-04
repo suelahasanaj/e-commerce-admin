@@ -3,7 +3,7 @@ import prismadb from "@/lib/prismadb";
 import { BillboardClient } from "./components/client";
 import { BillboardColumn } from "./components/columns";
 
-export const BillboardsPage = async ({
+const BillboardsPage = async ({
   params,
 }: {
   params: {
